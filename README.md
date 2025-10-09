@@ -18,7 +18,7 @@
 
 ### 1. Clone the Repository
 ```
-git clone [<repo-url>](https://github.com/kalinatringas/GDG-project-FA2025.git)
+git clone https://github.com/kalinatringas/GDG-project-FA2025.git
 cd GDG-project-FA2025/frontend
 ```
 ### 2. Install Dependencies
