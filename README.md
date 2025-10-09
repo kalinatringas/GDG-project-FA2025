@@ -33,7 +33,7 @@ The app will start on http://localhost:5173
 
 ---
 
-##👩‍💻 Contributing
+## 👩‍💻 Contributing
 
 If you’re new to frontend or React — don’t worry! Here’s how to contribute confidently:
 
@@ -49,17 +49,23 @@ git push origin feature/component-name
 
 ### 4. Ask for a code review from your frontend leads (Krish or Kalina) before merging.
 
+---
+
 ## 💡 Beginner-Friendly Tips
 
 Use npm run dev often — you’ll instantly see your code changes live.
 Don’t be afraid to ask questions — this project is meant to be a learning experience.
 Keep components small and focused (e.g., Button, Card, Leaderboard).
 
+---
+
 ## 📚 Helpful Resources
 [React Learn](https://react.dev/learn)
 [React Docs](https://react.dev/)
 [TailwindCSS Docs](https://tailwindcss.com/docs/installation/using-vite)
 [Typescript Docs](https://www.typescriptlang.org/docs/)
+
+---
 
 ## 🤝 Team
 
