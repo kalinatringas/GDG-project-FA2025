@@ -6,24 +6,33 @@
 
 ## 🚀 Features (In Progress)
 
-- 🧠 AI-generated study questions from your own material  
-- 💬 Study assistant for guided learning  
-- 🏆 XP + leaderboard system to gamify studying  
-- 🎨 Character creation and XP store *(coming soon!)*  
-- ⚡ Modern React + Tailwind + TypeScript frontend  
+- AI-generated study questions from your own material  
+- Study assistant for guided learning  
+- XP + leaderboard system to gamify studying  
+- Character creation and XP store *(coming soon!)*  
+- Modern React + Tailwind + TypeScript frontend  
 
 ---
 
 ## 🛠️ Getting Started (Frontend)
 
 ### 1. Clone the Repository
+```
 git clone [<repo-url>](https://github.com/kalinatringas/GDG-project-FA2025.git)
-cd studyquest/frontend
+cd GDG-project-FA2025/frontend
+```
 ### 2. Install Dependencies
+```
 npm install
+```
 ### 3. Run the developmnet server
+```
 npm run dev
+```
 The app will start on http://localhost:5173
+
+---
+
 ##👩‍💻 Contributing
 
 If you’re new to frontend or React — don’t worry! Here’s how to contribute confidently:
@@ -55,5 +64,10 @@ Keep components small and focused (e.g., Button, Card, Leaderboard).
 ## 🤝 Team
 
 Frontend Leads: Krish, Kalina
+Frontend Team:
 
 Backend Leads: Adi, Anish
+Backend Team:
+
+UX/UI Team: 
+
