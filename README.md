@@ -14,20 +14,6 @@
 
 ---
 
-## 🧩 Project Structure
-
-│
-├── frontend/ # React + Tailwind + TypeScript app
-│ ├── src/
-│ ├── package.json
-│ └── ...
-│
-└── backend/ 
-├── ...
-
-
----
-
 ## 🛠️ Getting Started (Frontend)
 
 ### 1. Clone the Repository
