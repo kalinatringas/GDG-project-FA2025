@@ -70,9 +70,11 @@ Keep components small and focused (e.g., Button, Card, Leaderboard).
 ## 🤝 Team
 
 Frontend Leads: Krish, Kalina
+
 Frontend Team:
 
 Backend Leads: Adi, Anish
+
 Backend Team:
 
 UX/UI Team: 
