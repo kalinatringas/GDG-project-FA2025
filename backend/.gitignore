@@ -1,1 +1,10 @@
-node_modules/, *.db, .env
+# Dependencies
+/node_modules
+
+# Database
+*.db
+*.sqlite
+
+# Environment variables
+.env
+.env.local
