@@ -21,11 +21,18 @@ function Navbar() {
   // Hint: useState should start with 'false' (menu closed)
   const [isOpen, setisOpen] = useState(false);
 
+  const [isFavorited, setisFavorited] = useState(false);
+
 
   // TODO #3: Create toggle function
   // This flips the menu open/close each time button is clicked
   const toggleMenu = () => {
     setisOpen(!isOpen);
+  };
+
+
+  const handleClick = () => {
+    setisFavorited(true);
   };
 
 
@@ -75,7 +82,7 @@ function Navbar() {
                {
                 navLinks.map((href, name) => (
                   <a key={href} href={href} className="text-gray-700 hover:text-blue-600">
-                    {name} 
+                    {name}
                   </a>
                 ))
             }
