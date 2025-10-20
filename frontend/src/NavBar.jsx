@@ -64,10 +64,10 @@ function Navbar() {
           {/* 🏷 SECTION 4: LOGO / BRAND */}
           {/* ===================================================== */}
           {/* TODO #6: Add your logo or brand name */}
-          <a href="/">MyBrand</a>
           <div className="flex-shrink-0">
-            {/* WRITE LOGO HERE */}
-            Hi logo
+            <a href="/" className="text-xl font-bold text-blue-600">
+              TBNamed
+            </a>
           </div>
 
           {/* ===================================================== */}
@@ -76,16 +76,14 @@ function Navbar() {
           {/* TODO #7: Display navLinks as horizontal list */}
           {/* Visible only on medium+ screens */}
           {/* Hint: 'hidden md:flex' */}
-          <div className="bg-pink-300">
+          <div className="hidden md:flex">
             <div className="flex space-x-8">
               {/* TODO #8: Loop through navLinks with .map() */}
-               {
-                navLinks.map((href, name) => (
-                  <a key={href} href={href} className="text-gray-700 hover:text-blue-600">
-                    {name}
-                  </a>
-                ))
-            }
+              {navLinks.map((link) => (
+                <a key={link.name} href={link.href} className="text-gray-700 hover:text-blue-600">
+                  {link.name}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -95,13 +93,17 @@ function Navbar() {
           {/* ===================================================== */}
           {/* TODO #9: Add hamburger icon button (visible on mobile only) */}
           {/* Hint: 'md:hidden' */}
-          <div className="">
+          <div className="md:hidden">
             {/* TODO #10: Add button + onClick to toggle menu */}
-          
-              <button onClick={toggleMenu} className="text-gray-700 hover:text-blue-600">
-                
-              </button>
-           
+            <button onClick={toggleMenu} className="text-gray-700 hover:text-blue-600 focus:outline-none">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
 
         </div>
@@ -113,16 +115,15 @@ function Navbar() {
       {/* ===================================================== */}
       {/* TODO #11: Conditionally render dropdown when isOpen === true */}
       {/* Use && operator */}
-    
-        {isOpen && (
-          <div className="md:hidden bg-white border-t">
-            {navLinks.map((link, name) => (
-              <a key={link} href={link} className="block px-3 py-2 text-gray-700 hover:bg-gray-100">
-                {name}
-              </a>
-            ))}
-          </div>
-        )}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t">
+          {navLinks.map((link) => (
+            <a key={link.name} href={link.href} className="block px-3 py-2 text-gray-700 hover:bg-gray-100">
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
     </div> 
   );
 }

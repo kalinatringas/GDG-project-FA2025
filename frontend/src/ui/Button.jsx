@@ -1,8 +1,6 @@
-import {useState} from useState;
+import {useState} from 'react';
 
-
-
-export default function Button(isClicked){
+export default function Button(){
 
     const [isClicked, setIsClicked] = useState(false)
 
@@ -17,6 +15,4 @@ export default function Button(isClicked){
         </div>
         </>
     )
-
-    
 }
