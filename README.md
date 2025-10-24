@@ -1,4 +1,4 @@
-# 🎓 GDG project — AI-Powered Study Game
+# 🎓 GDG project — Campus wide Bartering App
 
 **TBNamed** turns studying into an adventure! Feed it your material and it generates questions to help you master topics while earning XP and climbing the leaderboard. You can even chat with your AI study assistant for hints and explanations — not full answers — to help you truly learn.
 
@@ -6,11 +6,8 @@
 
 ## 🚀 Features (In Progress)
 
-- AI-generated study questions from your own material  
-- Study assistant for guided learning  
-- XP + leaderboard system to gamify studying  
-- Character creation and XP store *(coming soon!)*  
-- Modern React + Tailwind + TypeScript frontend  
+- Swap with those in your area!
+- Save $$, get cool stuff!
 
 ---
 
