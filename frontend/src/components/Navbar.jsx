@@ -7,6 +7,7 @@ return (
         <div className="flex gap-6">
             <a href="/home" className="hover:text-gray-300">Home</a>
             <a href="/profile" className="hover:text-gray-300">Profile</a>
+            <a href="/trading" className="hover:text-gray-300">Trading</a>
         </div>
     </nav>
  )
