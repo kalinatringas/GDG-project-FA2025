@@ -19,7 +19,7 @@ app.use(session({
 }));
 
 app.use('/auth', authRoutes);
-app.use('/items', authRoutes);
+app.use('/items', itemRoutes);
 
 sequelize.sync()
     .then(() => {
