@@ -1,31 +1,41 @@
 const express = require('express');
-const session = require('express-session');
-const SessionStore = require('session-file-store')(session);
-const sequelize = require('./database'); 
-const User = require('./models/user'); 
-const authRoutes = require('./routes/auth'); 
+const cors = require('cors');
+const dotenv = require('dotenv');
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
+// Middleware
+app.use(cors());
 app.use(express.json());
-app.use(session({
-    secret: 'Secre_Key', // You would put this in a .env file normally
-    store: new SessionStore({ path: './sessions' }),
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: 'auto' }
-}));
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/auth', authRoutes);
+// Basic route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'TBNamed API is running!',
+    status: 'success',
+    timestamp: new Date().toISOString()
+  });
+});
 
-sequelize.sync()
-    .then(() => {
-        console.log('Database synced successfully.');
-        app.listen(PORT, () => {
-            console.log(`Server listening on port ${PORT}`);
-        });
-    })
-    .catch(err => {
-        console.error('Error syncing database:', err);
-    });
+// Health check route
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'healthy',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`📡 API available at http://localhost:${PORT}`);
+  console.log(`🏥 Health check at http://localhost:${PORT}/health`);
+});
+
+module.exports = app;
