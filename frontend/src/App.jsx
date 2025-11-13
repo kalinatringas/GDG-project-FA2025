@@ -3,6 +3,7 @@ import Home from "./Home"
 import './App.css'
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
+import Trading from "./components/Trading";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path= "/profile" element = {<Profile/>}/>
+          <Route path= "/trading" element = {<Trading/>}/>
         </Routes>
        
       </div>
