@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    gap: 24px;
+    padding: 20px;
+    width: 95%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: linear-gradient(to top right, #202020, #101010);
+}
+
+.itemImage {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow:#101010;
+}
+
+.details {
+    flex: 1;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #c4c4c4;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.descriptionHeader {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.offerButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 150px;
+    transition: 0.3s;
+}
+
+    .offerButton:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+.sellerHeader {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.sellerInfo {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    width: fit-content;
+    min-width: 150px;
+    justify-self: center;
+    background:#333333;
+    height: 55px;
+    padding: 10px;
+    transition: 0.3s;
+}
+    .sellerImage {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .sellerInfo:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        color: white;
+    }
