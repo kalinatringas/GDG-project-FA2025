@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
-const loggedInTEMP = require('../middleware/TEMP');
+const loggedIn = require('../middleware/loggedIn');
 
-router.get('/:id', loggedInTEMP, async (req, res, next) => {
+router.get('/:id', loggedIn, async (req, res, next) => {
     // TASK 2: 
     // get item
     // get user email from item
-    const user_id = undefined;
+    const user_id = 0;
     const item_data = {};
 
 
