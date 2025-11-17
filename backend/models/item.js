@@ -16,6 +16,11 @@ const Item = sequelize.define('Item', {
     userID: {
         type: DataTypes.INTEGER,
         allowNull: false,
+    },
+    itemID: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        unique: true,
     }
 });
 

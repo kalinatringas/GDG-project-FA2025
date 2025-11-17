@@ -1,19 +1,20 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
+const Item = require('../models/item');
 const loggedIn = require('../middleware/loggedIn');
 
 router.get('/:id', loggedIn, async (req, res, next) => {
     const url_data = Number(req.params.id);
     if (Number.isInteger(url_data)) {
-        // TODO: retrieval from DB (task 2)
-        const user_email = "abc@gmail.com";
-        const item_data = {};
-
-        res.status(200).send({item: item_data, email: user_email});
-    } else {
-        res.status(404).send({error: "Item ID not found.", id: url_data});
+        const item = await Item.findOne({where: {itemID: url_data}});
+        const user_email = await User.findOne({where: {userID: item.userID}});
+        if (item && user_email) {
+            res.status(200).send({item: item, email: user_email});
+            return;
+        }
     }
+    res.status(404).send({error: "Item ID not found.", id: url_data});
 });
 
 module.exports = router;
