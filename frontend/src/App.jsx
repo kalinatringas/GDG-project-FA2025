@@ -1,8 +1,10 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./Home"
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home"
 import './App.css'
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
+import Footer from "./components/footer/Footer";
+import About from "./components/About";
 
 
 function App() {
@@ -11,10 +13,11 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path= "/profile" element = {<Profile/>}/>
+          <Route path="/profile" element = {<Profile/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
-       
-      </div>
+      <Footer/>  
+    </div>
   )
 }
 
