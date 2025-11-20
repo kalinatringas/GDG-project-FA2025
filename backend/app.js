@@ -4,6 +4,7 @@ const SessionStore = require('session-file-store')(session);
 const sequelize = require('./database'); 
 const User = require('./models/user'); 
 const authRoutes = require('./routes/auth'); 
+const itemRoutes = require('./routes/items'); 
 
 const app = express();
 const PORT = 3000;
@@ -18,6 +19,7 @@ app.use(session({
 }));
 
 app.use('/auth', authRoutes);
+app.use('/items', itemRoutes);
 
 sequelize.sync()
     .then(() => {
