@@ -47,7 +47,7 @@ That's it! Your server is running.
 
 We use a simple Git workflow to keep our project clean. **Do not break these rules.**
 
-1.  **Never, ever work directly on the `main` branch.**
+1.  **Never, ever work directly on the `main` branch. Always fork the repo, if you are planning to commit changes!**
 2.  **Always create a new branch for your feature.** Give it a clear name.
     ```bash
     # Example: if you are making the "create items" feature
@@ -73,3 +73,4 @@ We use a simple Git workflow to keep our project clean. **Do not break these rul
 * **`routes/`**: This folder holds your API endpoints (URLs).
 * **`middleware/`**: This folder holds reusable helper functions.
 * **`app.js`**: This is the main server file.
+
