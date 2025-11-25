@@ -3,6 +3,7 @@ const session = require('express-session');
 const SessionStore = require('session-file-store')(session);
 const sequelize = require('./database'); 
 const User = require('./models/user'); 
+const Item = require('./models/item'); 
 const authRoutes = require('./routes/auth'); 
 const itemRoutes = require('./routes/items'); 
 
