@@ -1,17 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 export default function Trading() {
+  const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const tradingUserId = searchParams.get('user')
+
+  // State for listings
+  const [otherUserListings, setOtherUserListings] = useState([])
+  const [myListings, setMyListings] = useState([])
+  const [otherUserName, setOtherUserName] = useState('XX')
+
+  // Pagination state
+  const [otherUserPage, setOtherUserPage] = useState(1)
+  const [myPage, setMyPage] = useState(1)
+  const itemsPerPage = 5
+
+  // Filter state
+  const [otherUserFilter, setOtherUserFilter] = useState('all')
+  const [myFilter, setMyFilter] = useState('all')
+
+  // Trade offer state
+  const [requestItems, setRequestItems] = useState([])
+  const [offerItems, setOfferItems] = useState([])
+  const maxItemsPerSide = 4
+
+  const handleBackClick = () => {
+    navigate('/profile')
+  }
+
   return (
     <div className="min-h-screen">
       {/* Header */}
       <div className="p-6 text-center" style={{ backgroundColor: '#F58A07' }}>
         <h1 className="text-3xl font-bold text-white mb-2">Bartering</h1>
-        <h2 className="text-xl text-white">Trade With XX</h2>
+        <h2 className="text-xl text-white">Trade With {otherUserName}</h2>
       </div>
 
       {/* Back Button */}
       <div className="max-w-6xl mx-auto p-4">
-        <button className="flex items-center gap-2 text-sm hover:underline">
+        <button
+          onClick={handleBackClick}
+          className="flex items-center gap-2 text-sm hover:underline"
+        >
           <span>←</span>
           <span>Back to Trades List</span>
         </button>
